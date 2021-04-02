@@ -1,4 +1,4 @@
-# *HW1*
+# *HW2
 
 # 1. feature extractor and train model
 打開 hw1.ipynb 執行程序以及 train model 指令皆寫在裡面，模型定義寫在 moduleClass.py，feature extractor 方法寫在 functions.py
