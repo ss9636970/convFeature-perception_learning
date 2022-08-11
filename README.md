@@ -24,11 +24,11 @@ U-net結構為先將圖片轉成較低維度的向量(encoder)，再由此向量
 
 訓練完後已encoder後的向量作為圖片的特徵提取。
 
-參考自Deep Learning for Image Segmentation: U-Net Architecture
+參考自:
 
 [Deep Learning for Image Segmentation: U-Net Architecture]: https://heartbeat.comet.ml/deep-learning-for-image-segmentation-u-net-architecture-ff17f6e4c1cf
 
-![KAZE](https://github.com/ss9636970/KAZE-perception_learning/blob/main/readme/KAZE.PNG)
+![U-net](https://github.com/ss9636970/convFeature-perception_learning/blob/main/readme/U-net.png)
 
 # 3. Perception
 
