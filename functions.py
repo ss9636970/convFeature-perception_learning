@@ -24,15 +24,15 @@ def path2pic(img):
 
 # 處理多張圖片變成 tensor
 def pic2tensor(img_list):
-    adap = nn.AdaptiveMaxPool2d((1024, 1024))
     pic = []
+    n = len(img_list)
     for i in img_list:
-        a, b, c = i.shape
-        p1 = torch.tensor(i, dtype=torch.float).permute(2, 0, 1)
-        p2 = p1.view(1, 3, a, b)
-        p3 = adap(p2)
-        pic.append(p3)
+        img = cv2.resize(i, (512, 512))
+        p1 = torch.tensor(img, dtype=torch.float).permute(2, 0, 1)
+        p1 = p1.unsqueeze(0)
+        pic.append(p1)
     outputs = torch.cat(pic, dim=0)
+    outputs = outputs / 255 - 0.5
     return outputs
 
 def sumlist(l, n):
